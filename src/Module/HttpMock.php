@@ -3,7 +3,6 @@ namespace Codeception\Module;
 
 use Codeception\Module as CodeceptionModule;
 use Codeception\TestCase;
-use Codeception\Extension\HttpMock as HttpMockExtension;
 use Codeception\Module;
 use Codeception\Lib\ModuleContainer;
 use Mcustiel\DependencyInjection\DependencyInjectionService;

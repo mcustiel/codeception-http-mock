@@ -1,0 +1,40 @@
+{
+	"keywords" : [
+		"http",
+		"mock",
+		"http mock",
+		"codeception",
+		"extension"
+	],
+	"authors" : [{
+			"name" : "Mariano Custiel",
+			"email" : "jmcustiel@gmail.com",
+			"homepage" : "https://github.com/mcustiel",
+			"role" : "Developer"
+		}
+	],
+	"autoload" : {
+		"psr-4" : {
+			"Codeception\\" : "src"
+		}
+	},
+	"name" : "mcustiel/codeception-http-mock",
+	"type" : "library",
+	"description" : "Extension for HTTP Mock.",
+	"license" : "GPL-3.0+",
+	"require" : {
+		"php" : ">=5.4",
+		"codeception/codeception" : "~2.1.0",
+		"internations/http-mock" : "dev-master",
+		"mcustiel/php-simple-di" : ">=1.2.0"
+	},
+	"require-dev" : {
+		"phing/phing" : ">=2.12.0",
+		"squizlabs/php_codesniffer" : ">=2.3.4",
+		"phpmd/phpmd" : ">=2.3.2",
+		"sebastian/phpcpd" : ">=2.0.2",
+		"pdepend/pdepend" : ">=2.0.6",
+		"phploc/phploc" : ">=2.1.1",
+		"phpdocumentor/phpdocumentor" : ">=2.8.5"
+	}
+}

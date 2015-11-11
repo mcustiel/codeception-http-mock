@@ -4,7 +4,9 @@
 		"mock",
 		"http mock",
 		"codeception",
-		"extension"
+		"extension",
+		"module",
+		"mock external services"
 	],
 	"authors" : [{
 			"name" : "Mariano Custiel",

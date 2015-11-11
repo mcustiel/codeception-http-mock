@@ -13,6 +13,7 @@ class HttpMock extends CodeceptionModule
 
     public function __construct(ModuleContainer $moduleContainer, $config = null)
     {
+        parent::__construct($moduleContainer, $config);
         $this->diManager = new DependencyInjectionService();
     }
 

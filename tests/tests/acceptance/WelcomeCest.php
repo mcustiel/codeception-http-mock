@@ -19,7 +19,7 @@ class WelcomeCest
                 ->body('mocked body')
             ->end();
         $I->doNotExpectAnyOtherRequest();
-        $response = file_get_contents('http://localhost:28080/foo');
+        $response = file_get_contents('http://localhost:18080/foo');
         $I->assertEquals('mocked body', $response);
     }
 }

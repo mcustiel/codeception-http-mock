@@ -27,7 +27,7 @@
 	"require" : {
 		"php" : ">=5.4",
 		"codeception/codeception" : "~2.1.0",
-		"internations/http-mock" : "dev-master",
+		"internations/http-mock" : "~0.7",
 		"mcustiel/php-simple-di" : ">=1.2.0"
 	},
 	"require-dev" : {

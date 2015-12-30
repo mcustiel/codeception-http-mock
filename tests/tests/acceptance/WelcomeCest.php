@@ -22,4 +22,10 @@ class WelcomeCest
         $response = file_get_contents('http://localhost:18080/foo');
         $I->assertEquals('mocked body', $response);
     }
+
+    public function shouldNotSendResponseWhenNotSetup(\AcceptanceTester $I)
+    {
+        $response = @file_get_contents('http://localhost:18080/foo');
+        $I->assertFalse($response);
+    }
 }

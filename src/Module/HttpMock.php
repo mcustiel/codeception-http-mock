@@ -48,7 +48,13 @@ class HttpMock extends CodeceptionModule
     public function _after(TestCase $testCase)
     {
         parent::_after($testCase);
-        $error = (string)$this->diManager->get('httpMockServer')->getIncrementalErrorOutput();
+        $this->throwExceptionOnHttpMockError();
+        $this->diManager->get('httpMockServer')->clean();
+    }
+
+    private function throwExceptionOnHttpMockError()
+    {
+        $error = (string) $this->diManager->get('httpMockServer')->getIncrementalErrorOutput();
         if ($error != '') {
             throw new \Exception(
                 'HTTP mock server standard error output should be empty but is: ' .

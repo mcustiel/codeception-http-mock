@@ -8,9 +8,9 @@ After the tests are finished it will close the connection and turn http-mock off
 
 * [http-mock library](https://github.com/InterNations/http-mock)
 
-# Note
+## Note
 
-http-mock is a nice application but it lacks a lot of functionality. If you need a more complete application to mock and stub remote services, please give Phiremock a try. [Phiremock](https://github.com/mcustiel/phiremock) also has a nice [codeception extension](https://github.com/mcustiel/phiremock-codeception-extension). 
+http-mock is a nice application but it is very simple and lacks a lot of functionality. If you need a more complete application to mock and stub remote services, please give Phiremock a try. [Phiremock](https://github.com/mcustiel/phiremock) also has a nice [codeception extension](https://github.com/mcustiel/phiremock-codeception-extension). 
 
 ## Installation
 

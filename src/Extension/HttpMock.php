@@ -8,6 +8,7 @@ use InterNations\Component\HttpMock\Server;
 use InterNations\Component\HttpMock\MockBuilder;
 use InterNations\Component\HttpMock\Matcher\MatcherFactory;
 use Mcustiel\DependencyInjection\DependencyInjectionService;
+use Codeception\Events;
 
 class HttpMock extends CodeceptionExtension
 {
@@ -18,6 +19,12 @@ class HttpMock extends CodeceptionExtension
         'port' => '28080',
         'host' => 'localhost'
     ];
+
+    public static $events = [
+        Events::SUITE_BEFORE => 'startHttpMock',
+        Events::SUITE_AFTER  => 'stopHttpMock'
+    ];
+    
     /**
      * @var \InterNations\Component\HttpMock\Server
      */
@@ -31,15 +38,12 @@ class HttpMock extends CodeceptionExtension
     {
         parent::__construct(array_merge($this->defaults, $config), $options);
         $this->diManager = new DependencyInjectionService();
-        $this->startHttpMock();
+
     }
 
-    public function __destruct()
-    {
-        $this->stopHttpMock();
-    }
 
-    private function startHttpMock()
+
+    public function startHttpMock()
     {
         echo "Starting http mock server on {$this->config['host']}:{$this->config['port']}" . PHP_EOL;
         $this->server = new Server($this->config['port'], $this->config['host']);
@@ -63,7 +67,7 @@ class HttpMock extends CodeceptionExtension
         );
     }
 
-    private function stopHttpMock()
+    public function stopHttpMock()
     {
         echo 'Stoping http mock server' . PHP_EOL;
         $this->server->stop();

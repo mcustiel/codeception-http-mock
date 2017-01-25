@@ -38,7 +38,6 @@ class HttpMock extends CodeceptionExtension
     {
         parent::__construct(array_merge($this->defaults, $config), $options);
         $this->diManager = new DependencyInjectionService();
-
     }
 
 

@@ -68,7 +68,7 @@ class HttpMock extends CodeceptionExtension
 
     public function stopHttpMock()
     {
-        echo 'Stoping http mock server' . PHP_EOL;
+        echo 'Stopping http mock server' . PHP_EOL;
         $this->server->stop();
     }
 }
